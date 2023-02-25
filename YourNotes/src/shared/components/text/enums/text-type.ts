@@ -1,0 +1,10 @@
+export enum TEXT_TYPE {
+  HEADING_1,
+  TITLE_1,
+  TITLE_2,
+  SUBTITLE_1,
+  SUBTITLE_2,
+  BODY_1,
+  BODY_2,
+  CAPTION_1,
+}
