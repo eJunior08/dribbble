@@ -1,16 +1,19 @@
 import styled from 'styled-components/native';
 
+import { ComponentProps } from 'react';
+
+import { Text } from '../../shared/components/text';
 import { NoteCard } from '../../shared/components/note-card';
+import { TEXT_TYPE } from '../../shared/components/text/enums/text-type';
 
 export const Container = styled.SafeAreaView`
   background-color: #1e1e1e;
   flex: 1;
 `;
 
-export const Title = styled.Text`
-  font-size: 52px;
-  color: #fff;
-  font-weight: 700;
+export const Title = styled(Text).attrs<{}, ComponentProps<typeof Text>>({
+  type: TEXT_TYPE.HEADING_1,
+})`
   margin-left: 28px;
   margin-top: 40px;
 `;
