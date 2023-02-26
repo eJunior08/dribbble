@@ -35,12 +35,12 @@ function getFontStyleByType(type: TEXT_TYPE): FontStyle {
       fontFamily: 'San Francisco',
     },
     [TEXT_TYPE.SUBTITLE_1]: {
-      fontSize: 16,
+      fontSize: 18,
       fontWeight: 400,
       fontFamily: 'San Francisco',
     },
     [TEXT_TYPE.SUBTITLE_2]: {
-      fontSize: 18,
+      fontSize: 16,
       fontWeight: 400,
       fontFamily: 'San Francisco',
     },
