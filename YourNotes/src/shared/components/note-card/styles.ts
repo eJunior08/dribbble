@@ -1,8 +1,12 @@
 import styled from 'styled-components/native';
 
+import { ComponentProps } from 'react';
 import { Dimensions } from 'react-native';
 
 import { CARD_SIZE } from './enums/size';
+
+import { Text } from '../text';
+import { TEXT_TYPE } from '../text/enums/text-type';
 
 const { width: WIDTH } = Dimensions.get('window');
 
@@ -43,20 +47,27 @@ export const Container = styled.View<{
   background-color: ${({ color }) => color};
 `;
 
-export const Title = styled.Text`
-  font-size: 24px;
-  color: #1e1e1e;
+export const Title = styled(Text).attrs<{}, ComponentProps<typeof Text>>(
+  ({ theme }) => ({
+    type: TEXT_TYPE.TITLE_1,
+    color: theme.colors.neutral.dark,
+  }),
+)`
   margin-bottom: 10px;
 `;
 
-export const Subtitle = styled.Text`
-  font-size: 14px;
-  color: #838383;
-`;
+export const Subtitle = styled(Text).attrs<{}, ComponentProps<typeof Text>>(
+  ({ theme }) => ({
+    type: TEXT_TYPE.SUBTITLE_2,
+    color: theme.colors.gray.base,
+  }),
+)``;
 
-export const Description = styled.Text.attrs({
-  numberOfLines: 4,
-})`
+export const Description = styled(Text).attrs<{}, ComponentProps<typeof Text>>(
+  ({ theme }) => ({
+    color: theme.colors.gray.light,
+    numberOfLines: 4,
+  }),
+)`
   margin-top: 35px;
-  color: #a6a6a6;
 `;
