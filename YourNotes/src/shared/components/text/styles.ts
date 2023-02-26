@@ -60,12 +60,12 @@ function getFontStyleByType(type: TEXT_TYPE): FontStyle {
   return styleOptions[type] || styleOptions.default;
 }
 
-export const Text = styled.Text<{ type: TEXT_TYPE }>`
-  ${({ type, theme }) => {
+export const Text = styled.Text<{ type: TEXT_TYPE; color?: string }>`
+  ${({ type, color, theme }) => {
     const fontStyle = getFontStyleByType(type);
 
     return {
-      color: theme.colors.neutral.white,
+      color: color ?? theme.colors.neutral.white,
       fontSize: fontStyle.fontSize,
       fontWeight: fontStyle.fontWeight,
     };
