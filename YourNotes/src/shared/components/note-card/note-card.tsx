@@ -2,13 +2,15 @@ import React from 'react';
 
 import { CARD_SIZE } from './enums/size';
 
+import { colors } from '../../theme/colors';
+
 import * as S from './styles';
 
 type Options = {
   size?: CARD_SIZE;
   showAll?: boolean;
   rotate?: number;
-  theme?: 'primary' | 'light';
+  color?: string;
 };
 
 type Props = {
@@ -39,7 +41,7 @@ export const NoteCard: React.FC<Props> = ({
     <S.Container
       size={options.size ?? CARD_SIZE.REGULAR}
       rotate={options.rotate ?? 0}
-      theme={options.theme}
+      color={options.color ?? colors.neutral.white}
       {...props}>
       <S.Title>{title}</S.Title>
       <S.Subtitle>{formattedDate}</S.Subtitle>

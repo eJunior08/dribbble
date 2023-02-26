@@ -29,29 +29,10 @@ function getWidthByCardSize(cardSize: CARD_SIZE) {
   return width;
 }
 
-function getBackgroundColorByTheme(theme: string) {
-  let color = '#FFF';
-
-  switch (theme) {
-    case 'primary':
-      color = '#d1fa57';
-      break;
-
-    case 'light':
-      color = '#fff';
-      break;
-
-    default:
-      color = '#fff';
-  }
-
-  return color;
-}
-
 export const Container = styled.View<{
   size: CARD_SIZE;
   rotate: number;
-  theme: string;
+  color: string;
 }>`
   padding: 16px;
   padding-bottom: 36px;
@@ -59,7 +40,7 @@ export const Container = styled.View<{
 
   width: ${({ size }) => getWidthByCardSize(size)}px;
   transform: rotateZ(${({ rotate }) => rotate + 'deg'});
-  background-color: ${({ theme }) => getBackgroundColorByTheme(theme)};
+  background-color: ${({ color }) => color};
 `;
 
 export const Title = styled.Text`
