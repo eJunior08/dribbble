@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { CARD_SIZE } from '../../shared/components/note-card/enums/size';
-import { colors } from '../../shared/theme/colors';
-
 import * as S from './styles';
 
 type Props = {};
@@ -17,18 +14,12 @@ export const OnBoarding: React.FC<Props> = () => {
           title="Not sure where this is going"
           creationDate={new Date()}
           description="Don't read the caption, it's all same, you dumb dumb, did you even read this though"
-          options={{ size: CARD_SIZE.REGULAR, rotate: -10 }}
         />
 
         <S.PrimaryCard
           title="Not sure where this is going"
           creationDate={new Date()}
           description="Don't read the caption, it's all same, you dumb dumb, did you even read this though"
-          options={{
-            size: CARD_SIZE.REGULAR,
-            rotate: -10,
-            color: colors.primary.base,
-          }}
         />
       </S.CardsContainer>
     </S.Container>

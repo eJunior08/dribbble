@@ -1,8 +1,10 @@
 import React from 'react';
+import { ViewProps } from 'react-native';
 
 import { CARD_SIZE } from './enums/size';
 
 import { colors } from '../../theme/colors';
+import { Shadow } from '../../types/shadow';
 
 import * as S from './styles';
 
@@ -13,12 +15,13 @@ type Options = {
   color?: string;
 };
 
-type Props = {
-  title: string;
-  creationDate: Date;
-  description: string;
-  options: Options;
-};
+type Props = ViewProps &
+  Shadow & {
+    title: string;
+    creationDate: Date;
+    description: string;
+    options: Options;
+  };
 
 export const NoteCard: React.FC<Props> = ({
   title,
