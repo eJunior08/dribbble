@@ -9,6 +9,8 @@ export const colors: Color = {
     white: '#FFFFFF',
   },
   gray: {
-    base: '#5A5A5A',
+    dark: '#5A5A5A',
+    base: '#838383',
+    light: '#a6a6a6',
   },
 };

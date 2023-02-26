@@ -1,4 +1,4 @@
-type GrayColors = Record<'base', string>;
+type GrayColors = Record<'dark' | 'base' | 'light', string>;
 
 type NeutralColors = Record<'white' | 'dark', string>;
 
