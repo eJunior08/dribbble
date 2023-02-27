@@ -10,15 +10,24 @@ export const Container = styled.View`
 `;
 
 export const Avatar = styled.View`
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
   background-color: white;
 `;
 
 type TText = ComponentProps<typeof Text>;
 
-export const GreetingTitle = styled(Text).attrs<{}, TText>(() => ({
-  type: TEXT_TYPE.BODY_1,
-}))`
-  color: red;
+export const GreetingTitle = styled(Text).attrs<{}, TText>(({ theme }) => {
+  return {
+    type: TEXT_TYPE.BODY_1,
+    color: theme.colors.gray.light,
+  };
+})`
+  margin-left: 12px;
 `;
+
+export const NameTitle = styled(Text).attrs<{}, TText>(({ theme }) => ({
+  type: TEXT_TYPE.BODY_1,
+  color: theme.colors.neutral.white,
+}))``;

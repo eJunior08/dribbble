@@ -7,7 +7,7 @@ type Props = {};
 export const Header: React.FC<Props> = () => {
   return (
     <S.Container>
-      <S.Profile />
+      <S.Profile avatar="" name="Elson" />
       <S.Title>Your Notes</S.Title>
     </S.Container>
   );
